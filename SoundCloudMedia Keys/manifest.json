@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "SoundCloud Media Keys",
+  "version": "1.0",
+  "description": "The multimedia keys on the SoundCloud website work in priority mode",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://soundcloud.com/*"
+  ],
+  "commands": {
+    "play-pause": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P"
+      },
+      "description": "Play / Pause"
+    },
+    "next-track": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+N"
+      },
+      "description": "Next track"
+    },
+    "prev-track": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+B"
+      },
+      "description": "Previous track"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+}
